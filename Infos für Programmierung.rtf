@@ -1,0 +1,122 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf130
+{\fonttbl\f0\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;\red106\green62\blue62;\red63\green127\blue95;\red127\green0\blue85;
+\red127\green159\blue191;\red42\green0\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs22 \cf0     	\
+\cf3 //\ul F\'fcr\ulnone  die \ul Aufgabe\ulnone  \ul zur\ulnone  \ul Suche\ulnone  \ul eines\ulnone  \ul buchstabens\cf0 \ulnone \
+\cf3 //		for (double u: myList) \{ System.out.println(u);\cf0 \
+\cf3 //		\}\cf0 \
+\
+\cf3 // \ul F\'fcr\ulnone  \ul das\ulnone  \ul Kopieren\ulnone  \ul eines\ulnone  Arrays\cf0 \
+\cf3 //		\ul int\ulnone [] sourceArray = \{2, 3, 1, 5, 10\};\cf0 \
+\cf3 //		\ul int\ulnone [] targetArray = new \ul int\ulnone [sourceArray.length]; for (\ul int\ulnone  i = 0; i < sourceArray.length; i++) \{\cf0 \
+\cf3 //	    targetArray[i] = sourceArray[i];\cf0 \
+\cf3 //	  	\}\cf0 \
+    	\
+\cf3 //    	 \ul arraycopy\ulnone (sourceArray, source_posistion, targetArray, target_position, length);\cf0 \
+    	\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 	\cf4 public\cf0  \cf4 static\cf0  \cf4 void\cf0  main(String[] args) \{\
+		\cf3 // \cf5 TODO\cf3  Auto-generated method stub\cf0 \
+\
+		\cf4 int\cf0 [] Array1 = \cf4 new\cf0  \cf4 int\cf0 [101];\
+\
+		\cf4 for\cf0  (\cf4 int\cf0  i = 1; i < 101; i++) \{\
+\
+			Array1[i] = i;\
+			System.out.println(Array1[i]);\
+\
+			\cf4 boolean\cf0  Primzahl = \cf4 true\cf0 ;\
+\
+			\cf4 for\cf0  (\cf4 int\cf0  j = 2; j < Array1[i]; j++) \{\
+				\cf4 if\cf0  (Array1[i] % j == 0) \{\
+					Primzahl = \cf4 false\cf0 ;\
+				\}\
+			\}\
+\
+			\cf4 if\cf0  (Array1[i] == 1) \{\
+				Primzahl = \cf4 false\cf0 ;\
+\
+			\}\
+			\cf4 if\cf0  (Primzahl)\
+				System.out.println(\cf6 "Primzahl"\cf0 );\
+			\cf4 else\cf0 \
+				System.out.println(\cf6 "Kleinster Primfaktor:"\cf0 );\
+			\cf4 int\cf0  k = 2;\
+			\cf4 while\cf0  (k <= (\cf4 int\cf0 ) Math.sqrt(Array1[i]) & Array1[i] > 1) \{\
+				\cf4 if\cf0  (Array1[i] % k == 0) \{\
+					Array1[i] /= k;\
+					System.out.println(k);\
+					System.out.println(\cf6 "nicht Primzahl"\cf0 );\
+				\}\
+				\
+				\cf4 else\cf0  \{\
+					k++;\
+				\}\
+\
+			\}\
+\
+		\}\
+\
+	\}\
+\}\
+\
+\
+\
+\
+	\cf4 public\cf0  \cf4 static\cf0  \cf4 void\cf0  main(String[] args) \{\
+		\cf3 // \cf5 TODO\cf3  Auto-generated method stub\cf0 \
+\
+		Scanner scan = \cf4 new\cf0  Scanner(System.in); \cf3 // Zu testende Zahl einlesen\cf0 \
+		System.out.print(\cf6 "Please enter number: "\cf0 );\
+		\cf4 int\cf0  number = scan.nextInt();\
+		\
+		\cf4 int\cf0 [] Array1 = \cf4 new\cf0  \cf4 int\cf0 [101];\
+\
+		\cf4 for\cf0  (\cf4 int\cf0  i = 1; i < 101; i++) \{\
+\
+			Array1[i] = i;\
+		\}\
+		\
+		\
+		\cf4 int\cf0  index=0;\
+		\
+		\cf4 for\cf0  (\cf4 int\cf0  j= 0; j<Array1.length; j++)\{\
+			\cf4 if\cf0  (Array1[j]==number)\
+				index=j;\
+				\
+		\}\
+		System.out.println(index);\
+		\
+			\
+	\}\}	\
+			\cf3 /*\cf0 \
+\cf3 			System.out.println(Array1[i]);\cf0 \
+\
+\cf3 			boolean Primzahl = true;\cf0 \
+\
+\cf3 			for (int j = 2; j < Array1[i]; j++) \{\cf0 \
+\cf3 				if (Array1[i] % j == 0) \{\cf0 \
+\cf3 					Primzahl = false;\cf0 \
+\cf3 				\}\cf0 \
+\cf3 			\}\cf0 \
+\
+\cf3 			if (Array1[i] == 1) \{\cf0 \
+\cf3 				Primzahl = false;\cf0 \
+\
+\cf3 			\}\cf0 \
+\cf3 			if (Primzahl)\cf0 \
+\cf3 				System.out.println("Primzahl");\cf0 \
+\cf3 			else\cf0 \
+\cf3 				System.out.println("nicht Primzahl");\cf0 \
+\cf3 	\}\cf0 \
+\
+\cf3 \}\}*/\cf0 \
+}
